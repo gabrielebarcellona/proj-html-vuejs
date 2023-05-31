@@ -6,14 +6,14 @@ export default{}
     <div class="container">
         <h3>EVENTS</h3>
         <ul>
-            <li>
-                <img src="../../nightclub/avada-nightclub-events-3-1200x675.jpg" alt="">
+            <li v-for="Card in cardsFooter">
+                <img :src="GetImagePath(image)" alt="">
                 <div>
-                 <h1>DJ Fusion</h1>
-                 <p>august 19,2022 @ 8:00 am</p>
+                 <h1>{{Card.title}}</h1>
+                 <p>{{ Card.description }}</p>
                 </div>
             </li>
-
+<!-- 
             <li>
                 <img src="../../nightclub/avada-nightclub-events-5-1200x675.jpg" alt="">
                 <div>
@@ -28,7 +28,7 @@ export default{}
                  <h1>DJ Fusion</h1>
                  <p>august 19,2022 @ 8:00 am</p>
                 </div>
-            </li>
+            </li> -->
 
         </ul>
         <p>view All Events</p>

@@ -46,7 +46,7 @@ components : {
         border-radius: 5px;
     }
     img{
-        width: 200px;
+        width: 300px;
     }
     
    

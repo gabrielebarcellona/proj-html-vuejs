@@ -1,6 +1,13 @@
 <script>
-export default{
+import { stringifyExpression } from '@vue/compiler-core';
 
+
+export default{
+  props : {
+    Image : String,
+    title : String,
+    description : String
+  }
 }
 </script>
 
@@ -9,12 +16,13 @@ export default{
     <h4>SPECIAL EVENTS</h4>
     <h1>for your diary</h1>
     <div class="container-image">
-        <div class="card">
-            <img src="../../nightclub/avada-nightclub-events-1-800x450.jpg" alt="">
-            <h2>DJ Fusion</h2>
-            <p>DJ is the best DJ of this page</p>
+        <div class="card" v-for="card in cards" :key="card">
+            <img :src="GetImagePath(Image)" alt="">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.description }}</p>
         </div>
-        <div class="card">
+
+        <!-- <div class="card">
             <img src="../../nightclub/avada-nightclub-events-2.jpg" alt="">
             <h2>House Nation</h2>
             <p>DJ is the best DJ of this page</p>
@@ -38,7 +46,7 @@ export default{
             <img src="../../nightclub/avada-nightclub-events-6-400x225.jpg" alt="">
             <h2>Urban VIbes</h2>
             <p>DJ is the best DJ of this page</p>
-        </div>
+        </div> -->
 
         <button>RSVP NOW</button>
        

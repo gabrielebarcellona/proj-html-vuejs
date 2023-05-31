@@ -8,7 +8,7 @@ export default{}
        <div class="container-image">
           <h2>rooftop bar</h2>
        </div>
-            <div class="container-image">
+            <div class="container-image2">
                 <h2>dance lounge</h2>
           </div>
    </div>
@@ -27,6 +27,16 @@ export default{}
         width: 250px;
         height: 100px;
         background-image: url(../../nightclub/avada-nightclub-rooftoplounge-small.jpg);
+        margin-top: 60px;
+        background-size: cover;
+        h2{
+            margin-top: 50px;
+        }
+    }
+    .container-image2{
+        width: 250px;
+        height: 100px;
+        background-image: url(../../nightclub/avada-nightclub-events-3-400x225.jpg);
         margin-top: 60px;
         background-size: cover;
         h2{

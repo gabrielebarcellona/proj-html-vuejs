@@ -3,11 +3,45 @@ import { stringifyExpression } from '@vue/compiler-core';
 
 
 export default{
-  props : {
-    Image : String,
-    title : String,
-    description : String
-  }
+    data(){
+    return {
+      cards : [{
+        image : "avada-nightclub-events-1-200x113.jpg",
+        title : "DJ Fusion",
+        description : "August 19,2021 @ 8:00 am", 
+      },
+      {
+        image : "avada-nightclub-events-2.jpg",
+        title : "House Nation",
+        description : "August 19,2021 @ 8:00 am", 
+      },
+      {
+        image : "avada-nightclub-events-3.jpg",
+        title : "Jazz Night",
+        description : "August 19,2021 @ 8:00 am", 
+      },
+      {
+        image : "avada-nightclub-events-4.jpg",
+        title : "VIP Taster Session",
+        description : "August 19,2021 @ 8:00 am", 
+      },
+      {
+        image : "avada-nightclub-events-5.jpg",
+        title : "Funky House Rave",
+        description : "August 19,2021 @ 8:00 am", 
+      },
+      {
+        image : "avada-nightclub-events-6.jpg",
+        title : "Urban Vibes",
+        description : "August 19,2021 @ 8:00 am", 
+      }],
+    }
+  },
+  methods : {
+    GetImagePath : function(img){
+      return 'nightclub/' + img;
+    }
+  },
 }
 </script>
 
@@ -16,8 +50,8 @@ export default{
     <h4>SPECIAL EVENTS</h4>
     <h1>for your diary</h1>
     <div class="container-image">
-        <div class="card" v-for="card in cards" :key="card">
-            <img :src="GetImagePath(Image)" alt="">
+        <div class="card" v-for="card in cards" :key="card.title">
+            <img :src="GetImagePath(card.image)" alt="">
             <h2>{{ card.title }}</h2>
             <p>{{ card.description }}</p>
         </div>

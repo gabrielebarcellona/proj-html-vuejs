@@ -3,30 +3,7 @@ import events from './events.vue'
 import NightClub from './NightClub.vue';
 import VENUES from './VENUES.vue';
 export default {
-    data(){
-        return {
-            cardsFooter : [{
-        image : "avada-nightclub-events-1.jpg",
-        title : "DJ Fusion",
-        description : "August 19,2021 @ 8:00 am", 
-      }],
-      cardsFooter : [{
-        image : "avada-nightclub-events-6.jpg",
-        title : "House Nation",
-        description : "August 19,2021 @ 8:00 am", 
-      }],
-      cardsFooter : [{
-        image : "avada-nightclub-events-4.jpg",
-        title : "Jazz Night",
-        description : "August 19,2021 @ 8:00 am", 
-      }],
-        }
-    },
-    methods : {
-    GetImagePath : function(img){
-      return new URL('../nightclub')
-    }
-  },
+  
     components : {
         events , NightClub,VENUES
     },

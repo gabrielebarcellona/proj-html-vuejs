@@ -1,5 +1,30 @@
 <script>
-export default{}
+export default{
+    data(){
+        return {
+            cardsFooter : [{
+        image : "avada-nightclub-events-1-200x113.jpg",
+        title : "DJ Fusion",
+        description : "August 19,2021 @ 8:00 am", 
+      },
+      {
+        image : "avada-nightclub-events-6.jpg",
+        title : "House Nation",
+        description : "August 19,2021 @ 8:00 am", 
+      },
+      {
+        image : "avada-nightclub-events-4.jpg",
+        title : "Jazz Night",
+        description : "August 19,2021 @ 8:00 am", 
+      }],
+        }
+    },
+    methods : {
+    GetImagePath : function(img){
+      return 'nightclub/' + img;
+    }
+  },
+}
 </script>
 
 <template>
@@ -7,7 +32,7 @@ export default{}
         <h3>EVENTS</h3>
         <ul>
             <li v-for="Card in cardsFooter">
-                <img :src="GetImagePath(image)" alt="">
+                <img :src="GetImagePath(Card.image)" alt="">
                 <div>
                  <h1>{{Card.title}}</h1>
                  <p>{{ Card.description }}</p>
